@@ -7,14 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cats</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tailwind.css">
 </head>
 
 <body>
-  <div>
+  <div class="md:bg-blue-200 md:focus:bg-white">
     <input type="number" name="" id="http-cat">
     <input type="submit" value="HTTP Cat" onclick="inputClick()">
   </div>
   <img src="./img/loading-cat.gif" class="pic-cat">
+  <span id="facts" class="rounded shadow p-2 bg-white"></span>
   <script src="script.js"></script>
 </body>
 
