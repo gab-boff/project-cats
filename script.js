@@ -12,9 +12,11 @@ getCatsPics();
 const myDiv = document.querySelector('#facts');
 
 function getCatsFacts() {
-  fetch('https://cat-fact.herokuapp.com/facts')
+  fetch('https://cat-fact.herokuapp.com/facts/random/')
+    // .then((cats) => console.log(cats.json()))
     .then((cats) => cats.json())
-    .then((catsFacts) => catsFacts.forEach((facts) => myDiv.innerHTML += `<p><br>${facts.text}</p><br>`))
+    // .then((cat) => console.log(cat.text))
+    .then((catsFacts) => myDiv.innerHTML = `<p><br>${catsFacts.text}</p><br>`)
 }
 
 getCatsFacts();
@@ -27,4 +29,9 @@ function inputClick() {
   } else {
     thePic.setAttribute('src', `https://http.cat/${catValue.value}`)
   }
+}
+
+function reload() {
+  getCatsPics();
+  getCatsFacts();
 }

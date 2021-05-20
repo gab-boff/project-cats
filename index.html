@@ -11,12 +11,17 @@
 </head>
 
 <body>
-  <div class="md:bg-blue-200 md:focus:bg-white">
+  <div class="md:bg-red-900 md:focus:bg-red">
     <input type="number" name="" id="http-cat">
-    <input type="submit" value="HTTP Cat" onclick="inputClick()">
+    <input type="submit" value=" HTTP Cat " onclick="inputClick()"
+      style="color: rgba(127, 29, 29, var(--tw-bg-opacity))">
   </div>
   <img src="./img/loading-cat.gif" class="pic-cat">
-  <span id="facts" class="rounded shadow p-2 bg-white"></span>
+  <span id="facts"></span>
+  <span id="reload-btn">
+    <input type="button" value="Reload" onclick="reload()">
+  </span>
+  
   <script src="script.js"></script>
 </body>
 
